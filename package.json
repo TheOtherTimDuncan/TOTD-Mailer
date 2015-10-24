@@ -1,0 +1,14 @@
+{
+  "name": "totd-mailer",
+  "version": "1.0.0",
+  "author": "Tim Duncan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheOtherTimDuncan/TOTD-Mailer.git"
+  },
+  "dependencies": {
+    "azure-storage": "^0.6.0",
+    "sendgrid": "^1.9.2"
+  }
+}
