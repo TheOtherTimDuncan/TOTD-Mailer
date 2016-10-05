@@ -1,10 +1,9 @@
 var should = require('should');
 var sinon = require('sinon');
 
-var app = require('../lib/app.js');
+var handlebars = require('handlebars');
 
-var sendgrid = require('sendgrid')('key');
-var azure = require('azure-storage');
+var app = require('../lib/app.js');
 
 describe('createQueue', function () {
 
@@ -209,4 +208,10 @@ describe('sendEmail', function () {
         console.error.called.should.be.equal(true, 'console.error should be called');
         console.log.called.should.be.equal(true, 'console.log should be called');
     });
+});
+
+describe('buildEmail', function () {
+    it ('should build email from template', function () {
+        app.buildEmail(handlebars, '<p>{{ name }}</p>', { "name": "test" });
+    }); 
 });
