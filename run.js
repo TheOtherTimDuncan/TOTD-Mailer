@@ -1,7 +1,7 @@
 'use strict';
 
 var azure = require('azure-storage');
-var sg = require('sendgrid').SendGrid(process.env.SENDGRIDKEY);
+var sg = require('sendgrid')(process.env.SENDGRIDKEY);
 var sgmail = require('sendgrid').mail;
 var handlebars = require('handlebars');
 
