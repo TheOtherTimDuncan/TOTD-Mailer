@@ -3,6 +3,9 @@ logs
 *.log
 typings
 .vscode
+.vs
+bin
+obj
 
 # Runtime data
 pids
