@@ -1,9 +1,14 @@
+'use strict';
+
 var should = require('should');
 var sinon = require('sinon');
 
 var handlebars = require('handlebars');
 
 var app = require('../lib/app.js');
+
+var emailer = require('../lib/emailer-mailtrap.js')();
+emailer.send();
 
 describe('createQueue', function () {
 
