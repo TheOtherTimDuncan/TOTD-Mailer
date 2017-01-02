@@ -2,6 +2,7 @@
 logs
 *.log
 .vs
+bin
 obj
 
 *.user
