@@ -1,11 +1,19 @@
 # Logs
 logs
 *.log
-typings
-.vscode
 .vs
-bin
 obj
+
+*.user
+*.suo
+*.cscfg
+*.Cache
+project.lock.json
+appsettings.json
+/secrets
+sampledata/
+packages/
+/TOTD-Mailer-Azure/Shared
 
 # Runtime data
 pids
@@ -27,7 +35,7 @@ build/Release
 # Dependency directory
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules
+#node_modules
 
 # Users Environment Variables
 .lock-wscript

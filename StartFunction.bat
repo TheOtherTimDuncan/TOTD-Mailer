@@ -1,0 +1,1 @@
+"C:\Users\tdunc\AppData\Roaming\npm\node_modules\azure-functions-cli\bin\func" run EmailerMailtrap

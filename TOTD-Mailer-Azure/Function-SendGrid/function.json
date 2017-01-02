@@ -1,0 +1,17 @@
+﻿{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "queueMessage",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "sendgrid",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "direction": "out"
+    }
+  ]
+}
