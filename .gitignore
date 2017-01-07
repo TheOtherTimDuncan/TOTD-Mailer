@@ -15,6 +15,7 @@ appsettings.json
 sampledata/
 packages/
 /TOTD-Mailer-Azure/Shared
+TestResults
 
 # Runtime data
 pids
