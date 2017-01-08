@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TOTD.Mailer.Html
+namespace TOTD.Mailer.Templates
 {
     public partial class Body
     {

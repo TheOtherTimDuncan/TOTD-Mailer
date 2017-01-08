@@ -65,9 +65,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TOTD.Mailer.Html\TOTD.Mailer.Html.csproj">
+    <ProjectReference Include="..\TOTD.Mailer.Templates\TOTD.Mailer.Templates.csproj">
       <Project>{3faad441-9404-41d8-9d76-00c13108bcdb}</Project>
-      <Name>TOTD.Mailer.Html</Name>
+      <Name>TOTD.Mailer.Templates</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

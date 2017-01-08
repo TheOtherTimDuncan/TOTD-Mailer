@@ -7,8 +7,8 @@
     <ProjectGuid>{3FAAD441-9404-41D8-9D76-00C13108BCDB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TOTD.Mailer.Html</RootNamespace>
-    <AssemblyName>TOTD.Mailer.Html</AssemblyName>
+    <RootNamespace>TOTD.Mailer.Templates</RootNamespace>
+    <AssemblyName>TOTD.Mailer.Templates</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

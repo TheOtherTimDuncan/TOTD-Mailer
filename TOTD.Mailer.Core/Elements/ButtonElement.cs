@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using TOTD.Mailer.Html;
+using TOTD.Mailer.Templates;
 
 namespace TOTD.Mailer.Core.Elements
 {

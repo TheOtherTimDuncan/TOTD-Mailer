@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace TOTD.Mailer.Html
+namespace TOTD.Mailer.Templates
 {
     using System.Linq;
     using System.Text;
@@ -18,9 +18,9 @@ namespace TOTD.Mailer.Html
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Button.tt"
+    #line 1 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Body.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public partial class Button : ButtonBase
+    public partial class Body : BodyBase
     {
 #line hidden
         /// <summary>
@@ -28,29 +28,111 @@ namespace TOTD.Mailer.Html
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write(@"<table border=""0"" cellpadding=""0"" cellspacing=""0"" class=""btn btn-primary"" style=""border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;box-sizing:border-box;width:100%;"">
-    <tbody>
-    <tr>
-        <td align=""left"" style=""font-family:sans-serif;font-size:14px;vertical-align:top;padding-bottom:15px;"">
-        <table border=""0"" cellpadding=""0"" cellspacing=""0"" style=""border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;width:auto;"">
-            <tbody>
-            <tr>
-                <td style=""font-family:sans-serif;font-size:14px;vertical-align:top;background-color:#ffffff;border-radius:5px;text-align:center;background-color:#3498db;""><a href=""");
+            this.Write("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-" +
+                    "width\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">" +
+                    "\r\n    <title></title>\r\n    <style type=\"text/css\">\r\n        @media only screen a" +
+                    "nd (max-width: 620px) {\r\n            table[class=body] h1 {\r\n                fon" +
+                    "t-size: 28px !important;\r\n                margin-bottom: 10px !important;\r\n     " +
+                    "       }\r\n\r\n            table[class=body] p,\r\n            table[class=body] ul,\r" +
+                    "\n            table[class=body] ol,\r\n            table[class=body] td,\r\n         " +
+                    "   table[class=body] span,\r\n            table[class=body] a {\r\n                f" +
+                    "ont-size: 16px !important;\r\n            }\r\n\r\n            table[class=body] .wrap" +
+                    "per,\r\n            table[class=body] .article {\r\n                padding: 10px !i" +
+                    "mportant;\r\n            }\r\n\r\n            table[class=body] .content {\r\n          " +
+                    "      padding: 0 !important;\r\n            }\r\n\r\n            table[class=body] .co" +
+                    "ntainer {\r\n                padding: 0 !important;\r\n                width: 100% !" +
+                    "important;\r\n            }\r\n\r\n            table[class=body] .main {\r\n            " +
+                    "    border-left-width: 0 !important;\r\n                border-radius: 0 !importan" +
+                    "t;\r\n                border-right-width: 0 !important;\r\n            }\r\n\r\n        " +
+                    "    table[class=body] .btn table {\r\n                width: 100% !important;\r\n   " +
+                    "         }\r\n\r\n            table[class=body] .btn a {\r\n                width: 100" +
+                    "% !important;\r\n            }\r\n\r\n            table[class=body] .img-responsive {\r" +
+                    "\n                height: auto !important;\r\n                max-width: 100% !impo" +
+                    "rtant;\r\n                width: auto !important;\r\n            }\r\n        }\r\n     " +
+                    "   @media all {\r\n            .ExternalClass {\r\n                width: 100%;\r\n   " +
+                    "         }\r\n\r\n                .ExternalClass,\r\n                .ExternalClass p," +
+                    "\r\n                .ExternalClass span,\r\n                .ExternalClass font,\r\n  " +
+                    "              .ExternalClass td,\r\n                .ExternalClass div {\r\n        " +
+                    "            line-height: 100%;\r\n                }\r\n\r\n            .apple-link a {" +
+                    "\r\n                color: inherit !important;\r\n                font-family: inher" +
+                    "it !important;\r\n                font-size: inherit !important;\r\n                " +
+                    "font-weight: inherit !important;\r\n                line-height: inherit !importan" +
+                    "t;\r\n                text-decoration: none !important;\r\n            }\r\n\r\n        " +
+                    "    .btn-primary table td:hover {\r\n                background-color: #34495e !im" +
+                    "portant;\r\n            }\r\n\r\n            .btn-primary a:hover {\r\n                b" +
+                    "ackground-color: #34495e !important;\r\n                border-color: #34495e !imp" +
+                    "ortant;\r\n            }\r\n        }\r\n    </style>\r\n</head>\r\n<body itemscope=\"items" +
+                    "cope\" itemtype=\"http://schema.org/EmailMessage\" class=\"\" style=\"background-color" +
+                    ":#f6f6f6;font-family:sans-serif;-webkit-font-smoothing:antialiased;font-size:14p" +
+                    "x;line-height:1.4;margin:0;padding:0;-ms-text-size-adjust:100%;-webkit-text-size" +
+                    "-adjust:100%;\">\r\n    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"bo" +
+                    "dy\" style=\"border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;ba" +
+                    "ckground-color:#f6f6f6;width:100%;\">\r\n        <tr>\r\n            <td style=\"font-" +
+                    "family:sans-serif;font-size:14px;vertical-align:top;\">&nbsp;</td>\r\n            <" +
+                    "td class=\"container\" style=\"font-family:sans-serif;font-size:14px;vertical-align" +
+                    ":top;display:block;max-width:580px;padding:10px;width:580px;Margin:0 auto !impor" +
+                    "tant;\">\r\n                <div class=\"content\" style=\"box-sizing:border-box;displ" +
+                    "ay:block;Margin:0 auto;max-width:580px;padding:10px;\">\r\n                    <!--" +
+                    " START CENTERED WHITE CONTAINER -->\r\n                    <span class=\"preheader\"" +
+                    " style=\"color:transparent;display:none;height:0;max-height:0;max-width:0;opacity" +
+                    ":0;overflow:hidden;mso-hide:all;visibility:hidden;width:0;\">This is preheader te" +
+                    "xt. Some clients will show this text as a preview.</span>\r\n                    <" +
+                    "table class=\"main\" style=\"border-collapse:separate;mso-table-lspace:0pt;mso-tabl" +
+                    "e-rspace:0pt;background:#fff;border-radius:3px;width:100%;\">\r\n                  " +
+                    "      <!-- START MAIN CONTENT AREA -->\r\n                        <tr>\r\n          " +
+                    "                  <td class=\"wrapper\" style=\"font-family:sans-serif;font-size:14" +
+                    "px;vertical-align:top;box-sizing:border-box;padding:20px;\">\r\n                   " +
+                    "             <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-col" +
+                    "lapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;\">\r\n        " +
+                    "                            <tr>\r\n                                        <td st" +
+                    "yle=\"font-family:sans-serif;font-size:14px;vertical-align:top;\">\r\n              " +
+                    "                              ");
             
-            #line 13 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Button.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Link));
-            
-            #line default
-            #line hidden
-            this.Write(@""" target=""_blank"" style=""text-decoration:underline;background-color:#ffffff;border:solid 1px #3498db;border-radius:5px;box-sizing:border-box;color:#3498db;cursor:pointer;display:inline-block;font-size:14px;font-weight:bold;margin:0;padding:12px 25px;text-decoration:none;text-transform:capitalize;background-color:#3498db;border-color:#3498db;color:#ffffff;"">");
-            
-            #line 13 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Button.tt"
+            #line 111 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Body.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Content));
             
             #line default
             #line hidden
-            this.Write("</a></td>\r\n            </tr>\r\n            </tbody>\r\n        </table>\r\n        </t" +
-                    "d>\r\n    </tr>\r\n    </tbody>\r\n</table>\r\n");
+            this.Write(@"
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- END MAIN CONTENT AREA -->
+                    </table>
+                    ");
+            
+            #line 119 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Body.tt"
+ if(Footer !=null) {
+            
+            #line default
+            #line hidden
+            this.Write(@"                    <!-- START FOOTER -->
+                    <div class=""footer"" style=""clear:both;padding-top:10px;text-align:center;width:100%;"">
+                        <table border=""0"" cellpadding=""0"" cellspacing=""0"" style=""border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;"">
+                            <tr>
+                                <td class=""content-block"" style=""font-family:sans-serif;font-size:14px;vertical-align:top;color:#999999;font-size:12px;text-align:center;"">
+                                    ");
+            
+            #line 125 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Body.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Footer));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n                                </td>\r\n                            </tr>\r\n     " +
+                    "                   </table>\r\n                    </div>\r\n                    <!-" +
+                    "- END FOOTER -->\r\n                    ");
+            
+            #line 131 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Body.tt"
+ }
+            
+            #line default
+            #line hidden
+            this.Write("                    <!-- END CENTERED WHITE CONTAINER -->\r\n                </div>" +
+                    "\r\n            </td>\r\n            <td style=\"font-family:sans-serif;font-size:14p" +
+                    "x;vertical-align:top;\">&nbsp;</td>\r\n        </tr>\r\n    </table>\r\n</body>\r\n</html" +
+                    ">\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -62,7 +144,7 @@ namespace TOTD.Mailer.Html
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public class ButtonBase
+    public class BodyBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

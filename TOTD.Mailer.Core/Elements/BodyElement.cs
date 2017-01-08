@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TOTD.Mailer.Html;
+using TOTD.Mailer.Templates;
 using TOTD.Utility.EnumerableHelpers;
 
 namespace TOTD.Mailer.Core.Elements
