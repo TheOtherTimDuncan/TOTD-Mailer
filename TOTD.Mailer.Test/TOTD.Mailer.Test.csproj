@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="BodyElementTests.cs" />
     <Compile Include="ButtonElementTests.cs" />
+    <Compile Include="EmailBuilderTests.cs" />
     <Compile Include="ImageElementTests.cs" />
     <Compile Include="LinkElementTests.cs" />
     <Compile Include="ParagraphElementTests.cs" />

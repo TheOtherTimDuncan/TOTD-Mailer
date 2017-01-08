@@ -27,7 +27,8 @@ public static void Run(string queueMessage, TraceWriter log)
             message.From = new MailAddress(emailMessage.From);
 
             emailMessage.ToForEach(x => message.To.Add(x));
-            emailMessage.BccForEach(x => message.To.Add(x));
+            emailMessage.BccForEach(x => message.Bcc.Add(x));
+            emailMessage.CcForEach(x => message.CC.Add(x));
 
             message.Subject = emailMessage.Subject;
 

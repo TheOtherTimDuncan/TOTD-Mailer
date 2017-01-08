@@ -6,20 +6,32 @@ using TOTD.Utility.EnumerableHelpers;
 
 namespace TOTD.Mailer.Core.Elements
 {
-    public class TableCell
+    public class TableCellElement
     {
-        private List<BaseContentElement> _children = new List<BaseContentElement>();
+        private List<BaseContentElement> _children;
+        private TableRowElement _parent;
 
-        public TableCell AddText(string text)
+        public TableCellElement(TableRowElement parent)
+        {
+            this._children = new List<Elements.BaseContentElement>();
+            this._parent = parent;
+        }
+
+        public TableCellElement AddText(string text)
         {
             _children.Add(new TextElement(text));
             return this;
         }
 
-        public TableCell AddElement(BaseContentElement element)
+        public TableCellElement AddElement(BaseContentElement element)
         {
             _children.Add(element);
             return this;
+        }
+
+        public TableRowElement EndCell()
+        {
+            return _parent;
         }
 
         public string ToHtml()

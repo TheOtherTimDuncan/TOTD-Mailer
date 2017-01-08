@@ -15,6 +15,7 @@ public static void Run(string queueMessage, TraceWriter log, out Mail message)
     Personalization personalization = new Personalization();
     emailMessage.ToForEach(x => personalization.AddTo(new Email(x)));
     emailMessage.BccForEach(x => personalization.AddBcc(new Email(x)));
+    emailMessage.CcForEach(x => personalization.AddCc(new Email(x)));
 
     message = new Mail();
     message.From = new Email(emailMessage.From);

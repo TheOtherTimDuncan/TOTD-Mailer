@@ -15,7 +15,7 @@ namespace TOTD.Mailer.Test
         {
             string content = "content";
 
-            ParagraphElement element = new ParagraphElement().AddText(content);
+            ParagraphElement element = new ParagraphElement(null).AddText(content);
 
             element.ToHtml().Should()
                 .StartWith("<p ")
@@ -28,7 +28,7 @@ namespace TOTD.Mailer.Test
         {
             string content = "content";
 
-            ParagraphElement element = new ParagraphElement().AddText(content);
+            ParagraphElement element = new ParagraphElement(null).AddText(content);
 
             element.ToText().Should().Be(content + Environment.NewLine);
         }

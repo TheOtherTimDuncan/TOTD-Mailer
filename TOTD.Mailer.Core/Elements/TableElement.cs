@@ -8,12 +8,25 @@ namespace TOTD.Mailer.Core.Elements
 {
     public class TableElement : BaseElement
     {
-        private List<TableRow> _rows = new List<TableRow>();
+        private List<TableRowElement> _rows;
+        private BodyElement _parent;
 
-        public TableElement AddRow(TableRow row)
+        public TableElement(BodyElement parent)
         {
+            this._rows = new List<TableRowElement>();
+            this._parent = parent;
+        }
+
+        public TableRowElement BeginRow()
+        {
+            TableRowElement row = new TableRowElement(this);
             _rows.Add(row);
-            return this;
+            return row;
+        }
+
+        public BodyElement EndTable()
+        {
+            return _parent;
         }
 
         public override string ToHtml()

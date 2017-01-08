@@ -25,6 +25,12 @@ namespace TOTD.Mailer.Core
             set;
         }
 
+        public IEnumerable<string> Cc
+        {
+            get;
+            set;
+        }
+
         public string Subject
         {
             get;
@@ -51,6 +57,11 @@ namespace TOTD.Mailer.Core
         public void BccForEach(Action<string> action)
         {
             Bcc.NullSafeForEach(x => action(x));
+        }
+
+        public void CcForEach(Action<string> action)
+        {
+            Cc.NullSafeForEach(x => action(x));
         }
     }
 }

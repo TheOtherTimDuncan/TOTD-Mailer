@@ -16,9 +16,9 @@ namespace TOTD.Mailer.Test
             string cell1 = "cell1";
             string cell2 = "cell2";
 
-            TableRow row = new TableRow()
-                .AddCell(new TableCell().AddText(cell1))
-                .AddCell(new TableCell().AddText(cell2));
+            TableRowElement row = new TableRowElement(null)
+                .AddCell(cell1)
+                .AddCell(cell2);
 
             row.ToHtml().Should().Be($@"    <tr>
         <td>{cell1}</td>
@@ -33,9 +33,9 @@ namespace TOTD.Mailer.Test
             string cell1 = "123";
             string cell2 = "1234";
 
-            TableRow row = new TableRow()
-                .AddCell(new TableCell().AddText(cell1))
-                .AddCell(new TableCell().AddText(cell2));
+            TableRowElement row = new TableRowElement(null)
+                .AddCell(cell1)
+                .AddCell(cell2);
 
             row.ToText(new[] { 5, 5 }).Should().Be($"{cell1}   {cell2}  {Environment.NewLine}");
         }

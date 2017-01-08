@@ -8,7 +8,14 @@ namespace TOTD.Mailer.Core.Elements
 {
     public class ParagraphElement : BaseElement
     {
-        private List<BaseContentElement> _children = new List<BaseContentElement>();
+        private List<BaseContentElement> _children;
+        private BodyElement _parent;
+
+        public ParagraphElement(BodyElement parent)
+        {
+            this._children = new List<BaseContentElement>();
+            this._parent = parent;
+        }
 
         public ParagraphElement AddText(string text)
         {
@@ -20,6 +27,11 @@ namespace TOTD.Mailer.Core.Elements
         {
             _children.Add(element);
             return this;
+        }
+
+        public BodyElement EndParagraph()
+        {
+            return _parent;
         }
 
         public override string ToHtml()

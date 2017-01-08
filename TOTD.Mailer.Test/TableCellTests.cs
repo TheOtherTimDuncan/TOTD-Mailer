@@ -15,7 +15,7 @@ namespace TOTD.Mailer.Test
         {
             string content = "content";
 
-            TableCell element = new TableCell().AddText(content);
+            TableCellElement element = new TableCellElement(null).AddText(content);
 
             element.ToHtml().Should().Be($"    <td>{content}</td>" + Environment.NewLine);
         }
@@ -25,7 +25,7 @@ namespace TOTD.Mailer.Test
         {
             string content = "content";
 
-            TableCell element = new TableCell().AddText(content);
+            TableCellElement element = new TableCellElement(null).AddText(content);
 
             element.ToText().Should().Be(content);
         }

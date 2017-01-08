@@ -18,9 +18,15 @@ namespace TOTD.Mailer.Test
             string r2c1 = "r2c1";
             string r2c2 = "r2c2";
 
-            TableRow row1 = new TableRow().AddCell(new TableCell().AddText(r1c1)).AddCell(new TableCell().AddText(r1c2));
-            TableRow row2 = new TableRow().AddCell(new TableCell().AddText(r2c1)).AddCell(new TableCell().AddText(r2c2));
-            TableElement element = new TableElement().AddRow(row1).AddRow(row2);
+            TableElement element = new TableElement(null)
+                .BeginRow()
+                    .AddCell(r1c1)
+                    .AddCell(r1c2)
+                .EndRow()
+                .BeginRow()
+                    .AddCell(r2c1)
+                    .AddCell(r2c2)
+                .EndRow();
 
             string html = element.ToHtml();
             Console.WriteLine(html);
