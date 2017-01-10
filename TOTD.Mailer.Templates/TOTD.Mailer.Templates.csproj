@@ -62,18 +62,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Body.tt">
+    <None Include="Body.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Body.cs</LastGenOutput>
-    </Content>
-    <Content Include="Button.tt">
+    </None>
+    <None Include="Button.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Button.cs</LastGenOutput>
-    </Content>
-    <Content Include="DefaultStyles.tt">
+    </None>
+    <None Include="DefaultStyles.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>DefaultStyles.cs</LastGenOutput>
-    </Content>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
