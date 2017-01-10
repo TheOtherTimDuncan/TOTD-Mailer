@@ -48,6 +48,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Button.tt</DependentUpon>
     </Compile>
+    <Compile Include="DefaultStyles.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultStyles.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_Body.cs">
       <DependentUpon>Body.tt</DependentUpon>
@@ -64,6 +69,10 @@
     <Content Include="Button.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Button.cs</LastGenOutput>
+    </Content>
+    <Content Include="DefaultStyles.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DefaultStyles.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

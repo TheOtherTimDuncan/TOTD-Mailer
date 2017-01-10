@@ -18,9 +18,15 @@ namespace TOTD.Mailer.Core.Elements
             this._parent = parent;
         }
 
-        public TableRowElement AddCell(string text)
+        public TableRowElement AddCell(string text, string className = null)
         {
             TableCellElement cell = new TableCellElement(this).AddText(text);
+
+            if (className != null)
+            {
+                cell.AddClass(className);
+            }
+
             _cells.Add(cell);
             return this;
         }

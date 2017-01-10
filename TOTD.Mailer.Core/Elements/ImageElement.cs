@@ -20,7 +20,7 @@ namespace TOTD.Mailer.Core.Elements
 
         public override string ToHtml()
         {
-            return $@"<img src=""{Source}"" alt=""{Alt}"" width="""" height="""" border=""0"" style=""border: 0; outline: none; text-decoration: none; display:block;"">";
+            return $@"<img src=""{Source}"" alt=""{Alt}"" width="""" height="""" border=""0"">";
         }
 
         public override string ToText()

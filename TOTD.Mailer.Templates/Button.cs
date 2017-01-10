@@ -18,7 +18,7 @@ namespace TOTD.Mailer.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Button.tt"
+    #line 1 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Button.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
     public partial class Button : ButtonBase
     {
@@ -28,23 +28,19 @@ namespace TOTD.Mailer.Templates
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write(@"<table border=""0"" cellpadding=""0"" cellspacing=""0"" class=""btn btn-primary"" style=""border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;box-sizing:border-box;width:100%;"">
-    <tbody>
-    <tr>
-        <td align=""left"" style=""font-family:sans-serif;font-size:14px;vertical-align:top;padding-bottom:15px;"">
-        <table border=""0"" cellpadding=""0"" cellspacing=""0"" style=""border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;width:auto;"">
-            <tbody>
-            <tr>
-                <td style=""font-family:sans-serif;font-size:14px;vertical-align:top;background-color:#ffffff;border-radius:5px;text-align:center;background-color:#3498db;""><a href=""");
+            this.Write("<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"btn btn-primary\">\r\n    <" +
+                    "tbody>\r\n    <tr>\r\n        <td align=\"left\">\r\n        <table border=\"0\" cellpaddi" +
+                    "ng=\"0\" cellspacing=\"0\">\r\n            <tbody>\r\n            <tr>\r\n                " +
+                    "<td><a href=\"");
             
-            #line 13 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Button.tt"
+            #line 13 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Button.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Link));
             
             #line default
             #line hidden
-            this.Write(@""" target=""_blank"" style=""text-decoration:underline;background-color:#ffffff;border:solid 1px #3498db;border-radius:5px;box-sizing:border-box;color:#3498db;cursor:pointer;display:inline-block;font-size:14px;font-weight:bold;margin:0;padding:12px 25px;text-decoration:none;text-transform:capitalize;background-color:#3498db;border-color:#3498db;color:#ffffff;"">");
+            this.Write("\" target=\"_blank\">");
             
-            #line 13 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Html\Button.tt"
+            #line 13 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Button.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Content));
             
             #line default

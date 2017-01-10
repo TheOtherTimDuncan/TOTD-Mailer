@@ -17,10 +17,7 @@ namespace TOTD.Mailer.Test
 
             ParagraphElement element = new ParagraphElement(null).AddText(content);
 
-            element.ToHtml().Should()
-                .StartWith("<p ")
-                .And
-                .EndWith($">{content}</p>");
+            element.ToHtml().Should().Be($"<p>{content}</p>");
         }
 
         [TestMethod]

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using TOTD.Mailer.Core.Elements;
+using TOTD.Mailer.Templates;
 
 namespace TOTD.Mailer.Core
 {
@@ -11,12 +12,18 @@ namespace TOTD.Mailer.Core
 
         public static BodyElement BeginBody()
         {
-            return new EmailBuilder().Body;
+            DefaultStyles defaultStyles = new DefaultStyles();
+            return BeginBody(defaultStyles.TransformText());
         }
 
-        private EmailBuilder()
+        public static BodyElement BeginBody(string styles)
         {
-            Body = new BodyElement(this);
+            return new EmailBuilder(styles).Body;
+        }
+
+        private EmailBuilder(string styles)
+        {
+            Body = new BodyElement(this, styles);
         }
 
         private BodyElement Body

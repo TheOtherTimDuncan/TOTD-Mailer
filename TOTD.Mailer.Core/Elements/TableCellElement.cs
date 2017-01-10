@@ -9,17 +9,30 @@ namespace TOTD.Mailer.Core.Elements
     public class TableCellElement
     {
         private List<BaseContentElement> _children;
+        private List<string> _classes;
         private TableRowElement _parent;
 
         public TableCellElement(TableRowElement parent)
         {
             this._children = new List<Elements.BaseContentElement>();
+            this._classes = new List<string>();
             this._parent = parent;
+        }
+
+        private string GetClasses()
+        {
+            return String.Join(" ", _classes);
         }
 
         public TableCellElement AddText(string text)
         {
             _children.Add(new TextElement(text));
+            return this;
+        }
+
+        public TableCellElement AddClass(string className)
+        {
+            _classes.Add(className);
             return this;
         }
 
@@ -39,7 +52,7 @@ namespace TOTD.Mailer.Core.Elements
             StringBuilder builder = new StringBuilder();
 
             builder.Append("    ");
-            builder.Append("<td>");
+            builder.Append($"<td {GetClasses()}>");
 
             _children.NullSafeForEach(x => builder.Append(x.ToHtml()));
 

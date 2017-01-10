@@ -9,12 +9,19 @@ namespace TOTD.Mailer.Core.Elements
     public class TableElement : BaseElement
     {
         private List<TableRowElement> _rows;
+        private List<string> _classes;
         private BodyElement _parent;
 
         public TableElement(BodyElement parent)
         {
             this._rows = new List<TableRowElement>();
+            this._classes = new List<string>();
             this._parent = parent;
+        }
+
+        private string GetClasses()
+        {
+            return String.Join(" ", _classes);
         }
 
         public TableRowElement BeginRow()
@@ -29,11 +36,17 @@ namespace TOTD.Mailer.Core.Elements
             return _parent;
         }
 
+        public TableElement AddClass(string className)
+        {
+            _classes.Add(className);
+            return this;
+        }
+
         public override string ToHtml()
         {
             StringBuilder builder = new StringBuilder();
 
-            builder.AppendLine("<table>");
+            builder.AppendLine($"<table class={GetClasses()}>");
 
             _rows.NullSafeForEach(x => builder.Append(x.ToHtml()));
 

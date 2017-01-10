@@ -11,11 +11,13 @@ namespace TOTD.Mailer.Core.Elements
     {
         private List<BaseElement> _children;
         private EmailBuilder _builder;
+        private string _styles;
 
-        public BodyElement(EmailBuilder builder)
+        public BodyElement(EmailBuilder builder, string styles)
         {
             this._children = new List<BaseElement>();
             this._builder = builder;
+            this._styles = styles;
         }
 
         public BodyElement AddButton(string link, string content)
@@ -64,6 +66,12 @@ namespace TOTD.Mailer.Core.Elements
             return this;
         }
 
+        public BodyElement AddStyles(string styles)
+        {
+            _styles += styles;
+            return this;
+        }
+
         public BodyElement AddLineBreak()
         {
             LineBreakElement element = new LineBreakElement();
@@ -85,9 +93,15 @@ namespace TOTD.Mailer.Core.Elements
             return element;
         }
 
-        public TableElement BeginTable()
+        public TableElement BeginTable(string className = null)
         {
             TableElement element = new TableElement(this);
+
+            if (className != null)
+            {
+                element.AddClass(className);
+            }
+
             _children.Add(element);
             return element;
         }
@@ -102,7 +116,7 @@ namespace TOTD.Mailer.Core.Elements
             StringBuilder builder = new StringBuilder();
             _children.NullSafeForEach(x => builder.Append(x.ToHtml()));
 
-            Body body = new Body(builder.ToString());
+            Body body = new Body(builder.ToString(), _styles);
             return body.TransformText();
         }
 

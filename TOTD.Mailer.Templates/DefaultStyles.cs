@@ -18,9 +18,9 @@ namespace TOTD.Mailer.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Body.tt"
+    #line 1 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\DefaultStyles.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public partial class Body : BodyBase
+    public partial class DefaultStyles : DefaultStylesBase
     {
 #line hidden
         /// <summary>
@@ -28,104 +28,61 @@ namespace TOTD.Mailer.Templates
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-" +
-                    "width\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">" +
-                    "\r\n    <style type=\"text/css\">\r\n        ");
-            
-            #line 12 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Body.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Styles));
-            
-            #line default
-            #line hidden
-            this.Write("\r\n    </style>\r\n    <style type=\"text/css\" id=\"ignore\">\r\n        @media only scre" +
-                    "en and (max-width: 620px) {\r\n            table[class=body] h1 {\r\n               " +
-                    " font-size: 28px !important;\r\n                margin-bottom: 10px !important;\r\n " +
-                    "           }\r\n\r\n            table[class=body] p,\r\n            table[class=body] " +
-                    "ul,\r\n            table[class=body] ol,\r\n            table[class=body] td,\r\n     " +
-                    "       table[class=body] span,\r\n            table[class=body] a {\r\n             " +
-                    "   font-size: 16px !important;\r\n            }\r\n\r\n            table[class=body] ." +
-                    "wrapper,\r\n            table[class=body] .article {\r\n                padding: 10p" +
-                    "x !important;\r\n            }\r\n\r\n            table[class=body] .content {\r\n      " +
-                    "          padding: 0 !important;\r\n            }\r\n\r\n            table[class=body]" +
-                    " .container {\r\n                padding: 0 !important;\r\n                width: 10" +
-                    "0% !important;\r\n            }\r\n\r\n            table[class=body] .main {\r\n        " +
-                    "        border-left-width: 0 !important;\r\n                border-radius: 0 !impo" +
-                    "rtant;\r\n                border-right-width: 0 !important;\r\n            }\r\n\r\n    " +
-                    "        table[class=body] .btn table {\r\n                width: 100% !important;\r" +
-                    "\n            }\r\n\r\n            table[class=body] .btn a {\r\n                width:" +
-                    " 100% !important;\r\n            }\r\n\r\n            table[class=body] .img-responsiv" +
-                    "e {\r\n                height: auto !important;\r\n                max-width: 100% !" +
-                    "important;\r\n                width: auto !important;\r\n            }\r\n        }\r\n " +
-                    "       @media all {\r\n            .ExternalClass {\r\n                width: 100%;\r" +
-                    "\n            }\r\n\r\n                .ExternalClass,\r\n                .ExternalClas" +
-                    "s p,\r\n                .ExternalClass span,\r\n                .ExternalClass font," +
-                    "\r\n                .ExternalClass td,\r\n                .ExternalClass div {\r\n    " +
-                    "                line-height: 100%;\r\n                }\r\n\r\n            .apple-link" +
-                    " a {\r\n                color: inherit !important;\r\n                font-family: i" +
-                    "nherit !important;\r\n                font-size: inherit !important;\r\n            " +
-                    "    font-weight: inherit !important;\r\n                line-height: inherit !impo" +
-                    "rtant;\r\n                text-decoration: none !important;\r\n            }\r\n\r\n    " +
-                    "        .btn-primary table td:hover {\r\n                background-color: #34495e" +
-                    " !important;\r\n            }\r\n\r\n            .btn-primary a:hover {\r\n             " +
-                    "   background-color: #34495e !important;\r\n                border-color: #34495e " +
-                    "!important;\r\n            }\r\n        }\r\n    </style>\r\n</head>\r\n<body itemscope=\"i" +
-                    "temscope\" itemtype=\"http://schema.org/EmailMessage\" class=\"\">\r\n    <table border" +
-                    "=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"body\">\r\n        <tr>\r\n            <t" +
-                    "d>&nbsp;</td>\r\n            <td class=\"container\">\r\n                <div class=\"c" +
-                    "ontent\">\r\n\r\n                    <!-- START CENTERED WHITE CONTAINER -->\r\n       " +
-                    "             <span class=\"preheader\"></span>\r\n\r\n                    <table class" +
-                    "=\"main\">\r\n\r\n                        <!-- START MAIN CONTENT AREA -->\r\n          " +
-                    "              <tr>\r\n                            <td class=\"wrapper\">\r\n          " +
-                    "                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\r\n      " +
-                    "                              <tr>\r\n                                        <td>" +
-                    "\r\n                                            ");
-            
-            #line 116 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Body.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Content));
-            
-            #line default
-            #line hidden
-            this.Write(@"
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <!-- END MAIN CONTENT AREA -->
-
-                    </table>
-
-                    ");
-            
-            #line 126 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Body.tt"
- if(Footer !=null) {
-            
-            #line default
-            #line hidden
-            this.Write(@"                    <!-- START FOOTER -->
-                    <div class=""footer"">
-                        <table border=""0"" cellpadding=""0"" cellspacing=""0"">
-                            <tr>
-                                <td class=""content-block"">
-                                    ");
-            
-            #line 132 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Body.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Footer));
-            
-            #line default
-            #line hidden
-            this.Write("\r\n                                </td>\r\n                            </tr>\r\n     " +
-                    "                   </table>\r\n                    </div>\r\n                    <!-" +
-                    "- END FOOTER -->\r\n                    ");
-            
-            #line 138 "C:\Users\tdunc\Code\Projects\TOTD-Mailer\TOTD.Mailer.Templates\Body.tt"
- }
-            
-            #line default
-            #line hidden
-            this.Write("\r\n                    <!-- END CENTERED WHITE CONTAINER -->\r\n                </di" +
-                    "v>\r\n\r\n            </td>\r\n\r\n            <td>&nbsp;</td>\r\n        </tr>\r\n    </tab" +
-                    "le>\r\n</body>\r\n</html>\r\n");
+            this.Write("img {\r\n    border: none;\r\n    -ms-interpolation-mode: bicubic;\r\n    max-width: 10" +
+                    "0%;\r\n}\r\n\r\nbody {\r\n    background-color: #f6f6f6;\r\n    font-family: sans-serif;\r\n" +
+                    "    -webkit-font-smoothing: antialiased;\r\n    font-size: 14px;\r\n    line-height:" +
+                    " 1.4;\r\n    margin: 0;\r\n    padding: 0;\r\n    -ms-text-size-adjust: 100%;\r\n    -we" +
+                    "bkit-text-size-adjust: 100%;\r\n}\r\n\r\ntable {\r\n    border-collapse: separate;\r\n    " +
+                    "mso-table-lspace: 0pt;\r\n    mso-table-rspace: 0pt;\r\n    width: 100%;\r\n}\r\n\r\n    t" +
+                    "able td {\r\n        font-family: sans-serif;\r\n        font-size: 14px;\r\n        v" +
+                    "ertical-align: top;\r\n    }\r\n/* -------------------------------------\r\n          " +
+                    "BODY & CONTAINER\r\n      ------------------------------------- */\r\n.body {\r\n    b" +
+                    "ackground-color: #f6f6f6;\r\n    width: 100%;\r\n}\r\n/* Set a max-width, and make it " +
+                    "display as block so it will automatically stretch to that width, but will also s" +
+                    "hrink down on a phone or something */\r\n.container {\r\n    display: block;\r\n    ma" +
+                    "rgin: 0 auto !important;\r\n    /* makes it centered */\r\n    max-width: 580px;\r\n  " +
+                    "  padding: 10px;\r\n    width: 580px;\r\n}\r\n/* This should also be a block element, " +
+                    "so that it will fill 100% of the .container */\r\n.content {\r\n    box-sizing: bord" +
+                    "er-box;\r\n    display: block;\r\n    margin: 0 auto;\r\n    max-width: 580px;\r\n    pa" +
+                    "dding: 10px;\r\n}\r\n/* -------------------------------------\r\n          HEADER, FOO" +
+                    "TER, MAIN\r\n      ------------------------------------- */\r\n.main {\r\n    backgrou" +
+                    "nd: #fff;\r\n    border-radius: 3px;\r\n    width: 100%;\r\n}\r\n\r\n.wrapper {\r\n    box-s" +
+                    "izing: border-box;\r\n    padding: 20px;\r\n}\r\n\r\n.footer {\r\n    clear: both;\r\n    pa" +
+                    "dding-top: 10px;\r\n    text-align: center;\r\n    width: 100%;\r\n}\r\n\r\n    .footer td" +
+                    ",\r\n    .footer p,\r\n    .footer span,\r\n    .footer a {\r\n        color: #999999;\r\n" +
+                    "        font-size: 12px;\r\n        text-align: center;\r\n    }\r\n/* ---------------" +
+                    "----------------------\r\n          TYPOGRAPHY\r\n      ----------------------------" +
+                    "--------- */\r\nh1,\r\nh2,\r\nh3,\r\nh4 {\r\n    color: #000000;\r\n    font-family: sans-se" +
+                    "rif;\r\n    font-weight: 400;\r\n    line-height: 1.4;\r\n    margin: 0;\r\n    margin-b" +
+                    "ottom: 30px;\r\n}\r\n\r\nh1 {\r\n    font-size: 35px;\r\n    font-weight: 300;\r\n    text-a" +
+                    "lign: center;\r\n    text-transform: capitalize;\r\n}\r\n\r\np,\r\nul,\r\nol {\r\n    font-fam" +
+                    "ily: sans-serif;\r\n    font-size: 14px;\r\n    font-weight: normal;\r\n    margin: 0;" +
+                    "\r\n    margin-bottom: 15px;\r\n}\r\n\r\n    p li,\r\n    ul li,\r\n    ol li {\r\n        lis" +
+                    "t-style-position: inside;\r\n        margin-left: 5px;\r\n    }\r\n\r\na {\r\n    color: #" +
+                    "3498db;\r\n    text-decoration: underline;\r\n}\r\n/* --------------------------------" +
+                    "-----\r\n          BUTTONS\r\n      ------------------------------------- */\r\n.btn {" +
+                    "\r\n    box-sizing: border-box;\r\n    width: 100%;\r\n}\r\n\r\n    .btn > tbody > tr > td" +
+                    " {\r\n        padding-bottom: 15px;\r\n    }\r\n\r\n    .btn table {\r\n        width: aut" +
+                    "o;\r\n    }\r\n\r\n        .btn table td {\r\n            background-color: #ffffff;\r\n  " +
+                    "          border-radius: 5px;\r\n            text-align: center;\r\n        }\r\n\r\n   " +
+                    " .btn a {\r\n        background-color: #ffffff;\r\n        border: solid 1px #3498db" +
+                    ";\r\n        border-radius: 5px;\r\n        box-sizing: border-box;\r\n        color: " +
+                    "#3498db;\r\n        cursor: pointer;\r\n        display: inline-block;\r\n        font" +
+                    "-size: 14px;\r\n        font-weight: bold;\r\n        margin: 0;\r\n        padding: 1" +
+                    "2px 25px;\r\n        text-decoration: none;\r\n        text-transform: capitalize;\r\n" +
+                    "    }\r\n\r\n.btn-primary table td {\r\n    background-color: #3498db;\r\n}\r\n\r\n.btn-prim" +
+                    "ary a {\r\n    background-color: #3498db;\r\n    border-color: #3498db;\r\n    color: " +
+                    "#ffffff;\r\n}\r\n/* -------------------------------------\r\n          OTHER STYLES TH" +
+                    "AT MIGHT BE USEFUL\r\n      ------------------------------------- */\r\n.last {\r\n   " +
+                    " margin-bottom: 0;\r\n}\r\n\r\n.first {\r\n    margin-top: 0;\r\n}\r\n\r\n.align-center {\r\n   " +
+                    " text-align: center;\r\n}\r\n\r\n.align-right {\r\n    text-align: right;\r\n}\r\n\r\n.align-l" +
+                    "eft {\r\n    text-align: left;\r\n}\r\n\r\n.clear {\r\n    clear: both;\r\n}\r\n\r\n.mt0 {\r\n    " +
+                    "margin-top: 0;\r\n}\r\n\r\n.mb0 {\r\n    margin-bottom: 0;\r\n}\r\n\r\n.preheader {\r\n    color" +
+                    ": transparent;\r\n    display: none;\r\n    height: 0;\r\n    max-height: 0;\r\n    max-" +
+                    "width: 0;\r\n    opacity: 0;\r\n    overflow: hidden;\r\n    mso-hide: all;\r\n    visib" +
+                    "ility: hidden;\r\n    width: 0;\r\n}\r\n\r\n.powered-by a {\r\n    text-decoration: none;\r" +
+                    "\n}\r\n\r\nhr {\r\n    border: 0;\r\n    border-bottom: 1px solid #f6f6f6;\r\n    margin: 2" +
+                    "0px 0;\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -137,7 +94,7 @@ namespace TOTD.Mailer.Templates
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public class BodyBase
+    public class DefaultStylesBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
