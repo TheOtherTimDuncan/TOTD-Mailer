@@ -3,6 +3,7 @@
 using System;
 using System.Net.Mime;
 using Newtonsoft.Json;
+using PreMailer.Net;
 using SendGrid.Helpers.Mail;
 using TOTD.Mailer.Core;
 
@@ -25,7 +26,9 @@ public static void Run(string queueMessage, TraceWriter log, out Mail message)
     Content textContent = new Content(MediaTypeNames.Text.Plain, emailMessage.TextBody);
     message.AddContent(textContent);
 
-    Content htmlContent = new Content(MediaTypeNames.Text.Html, emailMessage.HtmlBody);
+    InlineResult result = PreMailer.Net.PreMailer.MoveCssInline(emailMessage.HtmlBody, removeStyleElements: true, ignoreElements: "#ignore");
+
+    Content htmlContent = new Content(MediaTypeNames.Text.Html, result.Html);
     message.AddContent(htmlContent);
 
     log.Info($"Sending {message.Get()}");

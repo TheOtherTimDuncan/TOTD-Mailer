@@ -7,6 +7,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Text;
 using Newtonsoft.Json;
+using PreMailer.Net;
 using TOTD.Mailer.Core;
 
 public static void Run(string queueMessage, TraceWriter log)
@@ -32,7 +33,9 @@ public static void Run(string queueMessage, TraceWriter log)
 
             message.Subject = emailMessage.Subject;
 
-            AlternateView htmlView = AlternateView.CreateAlternateViewFromString(emailMessage.HtmlBody, Encoding.UTF8, MediaTypeNames.Text.Html);
+            InlineResult result = PreMailer.Net.PreMailer.MoveCssInline(emailMessage.HtmlBody, removeStyleElements: true, ignoreElements: "#ignore");
+
+            AlternateView htmlView = AlternateView.CreateAlternateViewFromString(result.Html, Encoding.UTF8, MediaTypeNames.Text.Html);
             message.AlternateViews.Add(htmlView);
 
             AlternateView textView = AlternateView.CreateAlternateViewFromString(emailMessage.TextBody, Encoding.UTF8, MediaTypeNames.Text.Plain);

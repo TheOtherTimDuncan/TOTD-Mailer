@@ -3,7 +3,8 @@
     "net46": {
       "dependencies": {
         "Newtonsoft.Json": "9.0.1",
-        "Sendgrid": "8.0.5"
+        "Sendgrid": "8.0.5",
+        "PreMailer.Net": "1.5.5"
       }
     }
   }

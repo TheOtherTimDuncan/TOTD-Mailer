@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using PreMailer.Net;
+using TOTD.Mailer.Core;
 using TOTD.Mailer.Core.Elements;
 using TOTD.Mailer.Templates;
 using TOTD.Utility.UnitTestHelpers;
@@ -42,11 +44,24 @@ namespace TOTD.Mailer.Test
                     .EndRow()
                 .EndTable();
 
-            InlineResult result = PreMailer.Net.PreMailer.MoveCssInline(body.ToHtml(), removeStyleElements: true, ignoreElements: "#ignore");
-            File.WriteAllText(Path.Combine(UnitTestHelper.GetSolutionRoot(), "TestResults", "test-inlined.html"), result.Html);
+            string folder = Path.Combine(UnitTestHelper.GetSolutionRoot(), "TestResults");
 
-            File.WriteAllText(Path.Combine(UnitTestHelper.GetSolutionRoot(), "TestResults", "test.html"), body.ToHtml());
-            File.WriteAllText(Path.Combine(UnitTestHelper.GetSolutionRoot(), "TestResults", "test.txt"), body.ToText());
+            InlineResult result = PreMailer.Net.PreMailer.MoveCssInline(body.ToHtml(), removeStyleElements: true, ignoreElements: "#ignore");
+            File.WriteAllText(Path.Combine(folder, "test-inlined.html"), result.Html);
+
+            File.WriteAllText(Path.Combine(folder, "test.html"), body.ToHtml());
+            File.WriteAllText(Path.Combine(folder, "test.txt"), body.ToText());
+
+            EmailMessage emailMessage = new EmailMessage()
+            {
+                From = "test@test.com",
+                To = new[] { "to@to.com" },
+                Subject = "Test Subject",
+                HtmlBody = body.ToHtml(),
+                TextBody = body.ToText()
+            };
+            string json = JsonConvert.SerializeObject(emailMessage);
+            File.WriteAllText(Path.Combine(folder, "email.json"), json);
         }
     }
 }
