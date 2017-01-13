@@ -235,11 +235,16 @@ namespace TOTD.Mailer.Core
 
         public EmailBuilder To(string email)
         {
-            Message.To = new[] { email };
-            return this;
+            return To(new[] { email });
         }
 
         public EmailBuilder To(params string[] emails)
+        {
+            Message.To = emails;
+            return this;
+        }
+
+        public EmailBuilder To(IEnumerable<string> emails)
         {
             Message.To = emails;
             return this;
