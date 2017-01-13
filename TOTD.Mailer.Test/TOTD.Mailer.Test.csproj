@@ -77,7 +77,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BodyElementTests.cs" />
     <Compile Include="ButtonElementTests.cs" />
     <Compile Include="EmailBuilderTests.cs" />
     <Compile Include="ImageElementTests.cs" />

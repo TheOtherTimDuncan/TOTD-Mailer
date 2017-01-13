@@ -10,31 +10,10 @@ namespace TOTD.Mailer.Core.Elements
         private const string _indent = "    ";
 
         private List<TableCellElement> _cells;
-        private TableElement _parent;
 
-        public TableRowElement(TableElement parent)
+        public TableRowElement()
         {
             this._cells = new List<TableCellElement>();
-            this._parent = parent;
-        }
-
-        public TableRowElement AddCell(string text, string className = null)
-        {
-            TableCellElement cell = new TableCellElement(this).AddText(text);
-
-            if (className != null)
-            {
-                cell.AddClass(className);
-            }
-
-            _cells.Add(cell);
-            return this;
-        }
-
-        public TableCellElement BeginCell()
-        {
-            TableCellElement cell = new TableCellElement(this);
-            return cell;
         }
 
         public IEnumerable<int> GetCellTextLengths()
@@ -42,9 +21,16 @@ namespace TOTD.Mailer.Core.Elements
             return _cells.Select(x => x.ToText()).Select(x => x.Length);
         }
 
-        public TableElement EndRow()
+        public TableRowElement AddCell(TableCellElement cell)
         {
-            return _parent;
+            _cells.Add(cell);
+            return this;
+        }
+
+        public TableRowElement AddCell(string content)
+        {
+            TableCellElement cell = new TableCellElement().AddText(content);
+            return AddCell(cell);
         }
 
         public string ToHtml()

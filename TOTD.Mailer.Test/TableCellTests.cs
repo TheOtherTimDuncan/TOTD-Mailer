@@ -15,9 +15,22 @@ namespace TOTD.Mailer.Test
         {
             string content = "content";
 
-            TableCellElement element = new TableCellElement(null).AddText(content);
+            TableCellElement element = new TableCellElement().AddText(content);
 
-            element.ToHtml().Should().Be($"    <td>{content}</td>" + Environment.NewLine);
+            element.ToHtml().Should().Be($@"    <td class="""">{content}</td>" + Environment.NewLine);
+        }
+
+        [TestMethod]
+        public void GeneratesCorrectHtmlWithCssClas()
+        {
+            string content = "content";
+            string css = "css";
+
+            TableCellElement element = new TableCellElement()
+                .AddText(content)
+                .AddClass(css);
+
+            element.ToHtml().Should().Be($@"    <td class=""{css}"">{content}</td>" + Environment.NewLine);
         }
 
         [TestMethod]
@@ -25,7 +38,7 @@ namespace TOTD.Mailer.Test
         {
             string content = "content";
 
-            TableCellElement element = new TableCellElement(null).AddText(content);
+            TableCellElement element = new TableCellElement().AddText(content);
 
             element.ToText().Should().Be(content);
         }

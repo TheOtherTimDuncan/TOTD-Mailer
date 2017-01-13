@@ -18,27 +18,58 @@ namespace TOTD.Mailer.Test
             string r2c1 = "r2c1";
             string r2c2 = "r2c2";
 
-            TableElement element = new TableElement(null)
-                .BeginRow()
-                    .AddCell(r1c1)
-                    .AddCell(r1c2)
-                .EndRow()
-                .BeginRow()
-                    .AddCell(r2c1)
-                    .AddCell(r2c2)
-                .EndRow();
+            TableRowElement row1 = new TableRowElement()
+                .AddCell(r1c1)
+                .AddCell(r1c2);
+
+            TableRowElement row2 = new TableRowElement()
+                .AddCell(r2c1)
+                .AddCell(r2c2);
+
+            TableElement element = new TableElement()
+                .AddRow(row1)
+                .AddRow(row2);
 
             string html = element.ToHtml();
             Console.WriteLine(html);
 
-            html.Should().Be($@"<table>
+            html.Should().Be($@"
+<table class="""">
     <tr>
-        <td>{r1c1}</td>
-        <td>{r1c2}</td>
+        <td class="""">{r1c1}</td>
+        <td class="""">{r1c2}</td>
     </tr>
     <tr>
-        <td>{r2c1}</td>
-        <td>{r2c2}</td>
+        <td class="""">{r2c1}</td>
+        <td class="""">{r2c2}</td>
+    </tr>
+</table>
+");
+        }
+
+        [TestMethod]
+        public void GeneratesCorrectHtmlWithCssClass()
+        {
+            string r1c1 = "r1c1";
+            string r1c2 = "r1c2";
+            string css = "css";
+
+            TableRowElement row1 = new TableRowElement()
+                .AddCell(r1c1)
+                .AddCell(r1c2);
+
+            TableElement element = new TableElement()
+                .AddClass(css)
+                .AddRow(row1);
+
+            string html = element.ToHtml();
+            Console.WriteLine(html);
+
+            html.Should().Be($@"
+<table class=""{css}"">
+    <tr>
+        <td class="""">{r1c1}</td>
+        <td class="""">{r1c2}</td>
     </tr>
 </table>
 ");

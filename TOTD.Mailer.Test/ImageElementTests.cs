@@ -13,11 +13,7 @@ namespace TOTD.Mailer.Test
         [TestMethod]
         public void GeneratesCorrectHtml()
         {
-            ImageElement element = new ImageElement()
-            {
-                Alt = "alt",
-                Source = "source"
-            };
+            ImageElement element = new ImageElement("source", "alt");
 
             element.ToHtml().Should()
                 .StartWith("<img ")
@@ -32,11 +28,7 @@ namespace TOTD.Mailer.Test
         [TestMethod]
         public void GeneratesCorrectText()
         {
-            ImageElement element = new ImageElement()
-            {
-                Alt = "alt",
-                Source = "source"
-            };
+            ImageElement element = new ImageElement("source", "alt");
             element.ToText().Should().BeEmpty();
         }
     }

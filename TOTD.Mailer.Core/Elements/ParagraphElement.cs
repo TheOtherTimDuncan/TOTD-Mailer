@@ -6,15 +6,13 @@ using TOTD.Utility.EnumerableHelpers;
 
 namespace TOTD.Mailer.Core.Elements
 {
-    public class ParagraphElement : BaseElement
+    public class ParagraphElement : BaseContainerElement
     {
-        private List<BaseContentElement> _children;
-        private BodyElement _parent;
+        private List<BaseElement> _children;
 
-        public ParagraphElement(BodyElement parent)
+        public ParagraphElement()
         {
-            this._children = new List<BaseContentElement>();
-            this._parent = parent;
+            this._children = new List<BaseElement>();
         }
 
         public ParagraphElement AddText(string text)
@@ -23,15 +21,9 @@ namespace TOTD.Mailer.Core.Elements
             return this;
         }
 
-        public ParagraphElement AddElement(BaseContentElement element)
+        public override void AddElement(BaseElement element)
         {
             _children.Add(element);
-            return this;
-        }
-
-        public BodyElement EndParagraph()
-        {
-            return _parent;
         }
 
         public override string ToHtml()

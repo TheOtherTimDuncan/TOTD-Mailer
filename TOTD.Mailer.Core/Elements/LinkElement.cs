@@ -6,6 +6,12 @@ namespace TOTD.Mailer.Core.Elements
 {
     public class LinkElement : BaseContentElement
     {
+        public LinkElement(string link, string content)
+        {
+            this.Link = link;
+            this.Content = content;
+        }
+
         public string Link
         {
             get;

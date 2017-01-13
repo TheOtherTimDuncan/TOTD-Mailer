@@ -6,17 +6,15 @@ using TOTD.Utility.EnumerableHelpers;
 
 namespace TOTD.Mailer.Core.Elements
 {
-    public class TableCellElement
+    public class TableCellElement : BaseContainerElement
     {
-        private List<BaseContentElement> _children;
+        private List<BaseElement> _children;
         private List<string> _classes;
-        private TableRowElement _parent;
 
-        public TableCellElement(TableRowElement parent)
+        public TableCellElement()
         {
-            this._children = new List<Elements.BaseContentElement>();
+            this._children = new List<BaseElement>();
             this._classes = new List<string>();
-            this._parent = parent;
         }
 
         private string GetClasses()
@@ -36,23 +34,17 @@ namespace TOTD.Mailer.Core.Elements
             return this;
         }
 
-        public TableCellElement AddElement(BaseContentElement element)
+        public override void AddElement(BaseElement element)
         {
             _children.Add(element);
-            return this;
         }
 
-        public TableRowElement EndCell()
-        {
-            return _parent;
-        }
-
-        public string ToHtml()
+        public override string ToHtml()
         {
             StringBuilder builder = new StringBuilder();
 
             builder.Append("    ");
-            builder.Append($"<td {GetClasses()}>");
+            builder.Append($@"<td class=""{GetClasses()}"">");
 
             _children.NullSafeForEach(x => builder.Append(x.ToHtml()));
 
@@ -62,7 +54,7 @@ namespace TOTD.Mailer.Core.Elements
             return builder.ToString();
         }
 
-        public string ToText()
+        public override string ToText()
         {
             StringBuilder builder = new StringBuilder();
 

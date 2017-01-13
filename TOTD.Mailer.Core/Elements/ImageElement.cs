@@ -6,6 +6,12 @@ namespace TOTD.Mailer.Core.Elements
 {
     public class ImageElement : BaseElement
     {
+        public ImageElement(string source, string alt)
+        {
+            this.Source = source;
+            this.Alt = alt;
+        }
+
         public string Source
         {
             get;

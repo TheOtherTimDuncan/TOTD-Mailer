@@ -13,11 +13,7 @@ namespace TOTD.Mailer.Test
         [TestMethod]
         public void GeneratesCorrectHtml()
         {
-            LinkElement element = new LinkElement()
-            {
-                Link = "link",
-                Content = "content"
-            };
+            LinkElement element = new LinkElement("link", "content");
 
             element.ToText().Should()
                 .StartWith("<a ")
@@ -30,11 +26,7 @@ namespace TOTD.Mailer.Test
         [TestMethod]
         public void GeneratesCorrectText()
         {
-            LinkElement element = new LinkElement()
-            {
-                Link = "link",
-                Content = "content"
-            };
+            LinkElement element = new LinkElement("link", "content");
 
             element.ToText().Should().Be(element.ToHtml());
         }

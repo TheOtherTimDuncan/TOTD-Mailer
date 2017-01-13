@@ -16,13 +16,13 @@ namespace TOTD.Mailer.Test
             string cell1 = "cell1";
             string cell2 = "cell2";
 
-            TableRowElement row = new TableRowElement(null)
+            TableRowElement row = new TableRowElement()
                 .AddCell(cell1)
                 .AddCell(cell2);
 
             row.ToHtml().Should().Be($@"    <tr>
-        <td>{cell1}</td>
-        <td>{cell2}</td>
+        <td class="""">{cell1}</td>
+        <td class="""">{cell2}</td>
     </tr>
 ");
         }
@@ -33,7 +33,7 @@ namespace TOTD.Mailer.Test
             string cell1 = "123";
             string cell2 = "1234";
 
-            TableRowElement row = new TableRowElement(null)
+            TableRowElement row = new TableRowElement()
                 .AddCell(cell1)
                 .AddCell(cell2);
 

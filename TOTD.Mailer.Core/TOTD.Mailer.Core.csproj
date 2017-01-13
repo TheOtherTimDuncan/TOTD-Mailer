@@ -42,6 +42,7 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Elements\BaseContainerElement.cs" />
     <Compile Include="Elements\BaseContentElement.cs" />
     <Compile Include="Elements\BaseElement.cs" />
     <Compile Include="Elements\BodyElement.cs" />

@@ -10,30 +10,16 @@ namespace TOTD.Mailer.Core.Elements
     {
         private List<TableRowElement> _rows;
         private List<string> _classes;
-        private BodyElement _parent;
 
-        public TableElement(BodyElement parent)
+        public TableElement()
         {
             this._rows = new List<TableRowElement>();
             this._classes = new List<string>();
-            this._parent = parent;
         }
 
         private string GetClasses()
         {
             return String.Join(" ", _classes);
-        }
-
-        public TableRowElement BeginRow()
-        {
-            TableRowElement row = new TableRowElement(this);
-            _rows.Add(row);
-            return row;
-        }
-
-        public BodyElement EndTable()
-        {
-            return _parent;
         }
 
         public TableElement AddClass(string className)
@@ -42,11 +28,18 @@ namespace TOTD.Mailer.Core.Elements
             return this;
         }
 
+        public TableElement AddRow(TableRowElement row)
+        {
+            _rows.Add(row);
+            return this;
+        }
+
         public override string ToHtml()
         {
             StringBuilder builder = new StringBuilder();
+            builder.AppendLine();
 
-            builder.AppendLine($"<table class={GetClasses()}>");
+            builder.AppendLine($@"<table class=""{GetClasses()}"">");
 
             _rows.NullSafeForEach(x => builder.Append(x.ToHtml()));
 
@@ -63,6 +56,7 @@ namespace TOTD.Mailer.Core.Elements
                 .ToArray();
 
             StringBuilder builder = new StringBuilder();
+            builder.AppendLine();
 
             _rows.NullSafeForEach(x => builder.Append(x.ToText(lengths)));
 
