@@ -131,7 +131,8 @@ namespace TOTD.Mailer.Core
                 throw new InvalidOperationException("Table cell added without starting a row");
             }
 
-            TableCellElement cell = new TableCellElement().AddText(text);
+            TableCellElement cell = new TableCellElement();
+            cell.AddText(text);
 
             if (className != null)
             {
@@ -172,6 +173,44 @@ namespace TOTD.Mailer.Core
             if (_container == null)
             {
                 throw new InvalidOperationException("Table cell ended without being started");
+            }
+
+            _container = null;
+
+            return this;
+        }
+
+        public EmailBuilder AddTableHeader(string content)
+        {
+            if (_tableRow == null)
+            {
+                throw new InvalidOperationException("Table header added without starting a row");
+            }
+
+            _tableRow.AddHeader(content);
+
+            return this;
+        }
+
+        public EmailBuilder BeginTableHeader()
+        {
+            if (_tableRow == null)
+            {
+                throw new InvalidOperationException("Table cell added without starting a row");
+            }
+
+            TableHeaderElement cell = new TableHeaderElement();
+            _container = cell;
+            _tableRow.AddCell(cell);
+
+            return this;
+        }
+
+        public EmailBuilder EndTableHeader()
+        {
+            if (_container == null)
+            {
+                throw new InvalidOperationException("Table header ended without being started");
             }
 
             _container = null;

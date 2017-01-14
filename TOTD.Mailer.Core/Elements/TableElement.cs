@@ -50,15 +50,32 @@ namespace TOTD.Mailer.Core.Elements
 
         public override string ToText()
         {
-            int[] lengths = _rows
-                .Select(x => x.GetCellTextLengths())
-                .Select(x => x.Max())
-                .ToArray();
+            IEnumerable<IEnumerable<int>> rowLengths = _rows.Select(x => x.GetCellTextLengths()).ToList();
+            List<int> lengths = new List<int>();
+            foreach (IEnumerable<int> cellLength in rowLengths)
+            {
+                int i = 0;
+                foreach (int l in cellLength)
+                {
+                    if (i >= lengths.Count())
+                    {
+                        lengths.Add(l);
+                    }
+                    else
+                    {
+                        if (l > lengths[i])
+                        {
+                            lengths[i] = l;
+                        }
+                    }
+                    i++;
+                }
+            }
 
             StringBuilder builder = new StringBuilder();
             builder.AppendLine();
 
-            _rows.NullSafeForEach(x => builder.Append(x.ToText(lengths)));
+            _rows.NullSafeForEach(x => builder.Append(x.ToText(lengths.ToArray())));
 
             builder.AppendLine();
 

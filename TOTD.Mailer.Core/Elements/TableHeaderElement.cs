@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace TOTD.Mailer.Core.Elements
 {
-    public class TableCellElement : BaseTableCellElement
+    public class TableHeaderElement : BaseTableCellElement
     {
-        public TableCellElement()
-            :base("td")
+        public TableHeaderElement()
+            :base("th")
         {
         }
     }
