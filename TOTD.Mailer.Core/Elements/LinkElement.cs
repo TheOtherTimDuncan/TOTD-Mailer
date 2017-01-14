@@ -25,7 +25,7 @@ namespace TOTD.Mailer.Core.Elements
 
         public override string ToText()
         {
-            return ToHtml();
+            return ToHtml() + Environment.NewLine;
         }
     }
 }

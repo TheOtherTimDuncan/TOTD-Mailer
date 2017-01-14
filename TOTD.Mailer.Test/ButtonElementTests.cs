@@ -37,7 +37,7 @@ namespace TOTD.Mailer.Test
                 .And
                 .Contain($@" href=""{element.Link}""")
                 .And
-                .EndWith($">{element.Content}</a>");
+                .EndWith($">{element.Content}</a>{Environment.NewLine}");
         }
     }
 }

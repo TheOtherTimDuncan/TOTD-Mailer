@@ -15,7 +15,7 @@ namespace TOTD.Mailer.Test
         {
             LinkElement element = new LinkElement("link", "content");
 
-            element.ToText().Should()
+            element.ToHtml().Should()
                 .StartWith("<a ")
                 .And
                 .Contain($@" href=""{element.Link}""")
@@ -28,7 +28,7 @@ namespace TOTD.Mailer.Test
         {
             LinkElement element = new LinkElement("link", "content");
 
-            element.ToText().Should().Be(element.ToHtml());
+            element.ToText().Should().Be(element.ToHtml() + Environment.NewLine);
         }
     }
 }
