@@ -236,9 +236,15 @@ namespace TOTD.Mailer.Core
             return AddElement(element);
         }
 
-        public EmailBuilder AddLineBreak()
+        public EmailBuilder AddLineBreak(string textAlternative = null)
         {
             LineBreakElement element = new LineBreakElement();
+
+            if (!textAlternative.IsNullOrEmpty())
+            {
+                element.TextAlternative = textAlternative;
+            }
+
             return AddElement(element);
         }
 
