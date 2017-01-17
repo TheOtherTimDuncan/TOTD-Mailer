@@ -12,10 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TOTD.Mailer.Azure</RootNamespace>
     <AssemblyName>TOTD.Mailer.Azure</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <ProduceOutputsOnBuild>true</ProduceOutputsOnBuild>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\AzureFunctions\Microsoft.AzureFunctions.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

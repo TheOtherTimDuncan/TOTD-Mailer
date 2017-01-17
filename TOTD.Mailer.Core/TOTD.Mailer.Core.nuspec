@@ -11,6 +11,6 @@
     <copyright>Copyright 2017</copyright>
   </metadata>
   <files>
-	<file src="bin\$configuration$\$id$.pdb" target="lib\net462" />
+	<file src="bin\$configuration$\$id$.pdb" target="lib\net46" />
   </files>
 </package>
