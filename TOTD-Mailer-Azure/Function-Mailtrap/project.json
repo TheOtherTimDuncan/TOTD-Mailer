@@ -3,7 +3,8 @@
     "net46": {
       "dependencies": {
         "Newtonsoft.Json": "9.0.1",
-        "PreMailer.Net": "1.5.5"
+        "PreMailer.Net": "1.5.5",
+        "totd.mailer.core": "1.6.0"
       }
     }
   }

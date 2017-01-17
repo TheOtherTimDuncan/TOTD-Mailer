@@ -1,6 +1,4 @@
-﻿#r "../Shared/TOTD.Mailer.Core.dll"
-
-using System;
+﻿using System;
 using System.Configuration;
 using System.Net;
 using System.Net.Mail;

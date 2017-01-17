@@ -1,6 +1,4 @@
-﻿#r "../Shared/TOTD.Mailer.Core.dll"
-
-using System;
+﻿using System;
 using System.Net.Mime;
 using Newtonsoft.Json;
 using PreMailer.Net;
