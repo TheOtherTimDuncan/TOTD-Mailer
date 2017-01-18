@@ -1,7 +1,7 @@
-﻿using System;
-using System.Net.Mime;
+﻿#load "../shared/sendgrid.csx"
+
+using System;
 using Newtonsoft.Json;
-using PreMailer.Net;
 using SendGrid.Helpers.Mail;
 using TOTD.Mailer.Core;
 
@@ -11,23 +11,5 @@ public static void Run(string queueMessage, TraceWriter log, out Mail message)
 
     EmailMessage emailMessage = JsonConvert.DeserializeObject<EmailMessage>(queueMessage);
 
-    Personalization personalization = new Personalization();
-    emailMessage.ToForEach(x => personalization.AddTo(new Email(x)));
-    emailMessage.BccForEach(x => personalization.AddBcc(new Email(x)));
-    emailMessage.CcForEach(x => personalization.AddCc(new Email(x)));
-
-    message = new Mail();
-    message.From = new Email(emailMessage.From);
-    message.Subject = emailMessage.Subject;
-    message.AddPersonalization(personalization);
-
-    Content textContent = new Content(MediaTypeNames.Text.Plain, emailMessage.TextBody);
-    message.AddContent(textContent);
-
-    InlineResult result = PreMailer.Net.PreMailer.MoveCssInline(emailMessage.HtmlBody, removeStyleElements: true, ignoreElements: "#ignore");
-
-    Content htmlContent = new Content(MediaTypeNames.Text.Html, result.Html);
-    message.AddContent(htmlContent);
-
-    log.Info($"Sending {message.Get()}");
+    message = SendWithSendGrid(emailMessage, log);
 }
