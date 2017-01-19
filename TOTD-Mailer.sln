@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOTD.Mailer.Test", "TOTD.Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOTD.Mailer.Templates", "TOTD.Mailer.Templates\TOTD.Mailer.Templates.csproj", "{3FAAD441-9404-41D8-9D76-00C13108BCDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOTD.Mailer.Azure", "TOTD.Mailer.Azure\TOTD.Mailer.Azure.csproj", "{7920357A-A362-4707-914D-B3B22FC56FE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3FAAD441-9404-41D8-9D76-00C13108BCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FAAD441-9404-41D8-9D76-00C13108BCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FAAD441-9404-41D8-9D76-00C13108BCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7920357A-A362-4707-914D-B3B22FC56FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7920357A-A362-4707-914D-B3B22FC56FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7920357A-A362-4707-914D-B3B22FC56FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7920357A-A362-4707-914D-B3B22FC56FE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
