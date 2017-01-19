@@ -1,0 +1,12 @@
+﻿{
+  "frameworks": {
+    "net46": {
+      "dependencies": {
+        "Sendgrid": "8.0.5",
+        "PreMailer.Net": "1.5.5",
+        "WindowsAzure.Storage": "7.0.0",
+        "totd.mailer.core": "1.6.0"
+      }
+    }
+  }
+}

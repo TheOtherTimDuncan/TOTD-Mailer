@@ -1,0 +1,17 @@
+﻿{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "emailMessage",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "emails/sendgrid-{name}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "direction": "out"
+    }
+  ]
+}

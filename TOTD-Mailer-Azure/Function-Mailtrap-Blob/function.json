@@ -1,0 +1,12 @@
+﻿{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "blob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "emails/mailtrap-{name}",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
