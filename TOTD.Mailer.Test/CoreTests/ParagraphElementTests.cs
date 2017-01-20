@@ -5,7 +5,7 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TOTD.Mailer.Core.Elements;
 
-namespace TOTD.Mailer.Test
+namespace TOTD.Mailer.Test.CoreTests
 {
     [TestClass]
     public class ParagraphElementTests

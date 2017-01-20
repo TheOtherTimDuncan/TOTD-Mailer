@@ -9,7 +9,7 @@ using PreMailer.Net;
 using TOTD.Mailer.Core;
 using TOTD.Utility.UnitTestHelpers;
 
-namespace TOTD.Mailer.Test
+namespace TOTD.Mailer.Test.CoreTests
 {
     [TestClass]
     public class EmailBuilderTests

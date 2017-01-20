@@ -77,16 +77,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ButtonElementTests.cs" />
-    <Compile Include="EmailBuilderTests.cs" />
-    <Compile Include="ImageElementTests.cs" />
-    <Compile Include="LinkElementTests.cs" />
-    <Compile Include="ParagraphElementTests.cs" />
+    <Compile Include="CoreTests\ButtonElementTests.cs" />
+    <Compile Include="CoreTests\EmailBuilderTests.cs" />
+    <Compile Include="CoreTests\ImageElementTests.cs" />
+    <Compile Include="CoreTests\LinkElementTests.cs" />
+    <Compile Include="CoreTests\ParagraphElementTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TableHeaderTests.cs" />
-    <Compile Include="TableCellTests.cs" />
-    <Compile Include="TableRowTests.cs" />
-    <Compile Include="TableTests.cs" />
+    <Compile Include="CoreTests\TableHeaderTests.cs" />
+    <Compile Include="CoreTests\TableCellTests.cs" />
+    <Compile Include="CoreTests\TableRowTests.cs" />
+    <Compile Include="CoreTests\TableTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

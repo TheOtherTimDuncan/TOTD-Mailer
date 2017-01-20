@@ -5,20 +5,20 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TOTD.Mailer.Core.Elements;
 
-namespace TOTD.Mailer.Test
+namespace TOTD.Mailer.Test.CoreTests
 {
     [TestClass]
-    public class TableHeaderTests
+    public class TableCellTests
     {
         [TestMethod]
         public void GeneratesCorrectHtml()
         {
             string content = "content";
 
-            TableHeaderElement element = new TableHeaderElement();
+            TableCellElement element = new TableCellElement();
             element.AddText(content);
 
-            element.ToHtml().Should().Be($@"    <th class="""">{content}</th>" + Environment.NewLine);
+            element.ToHtml().Should().Be($@"    <td class="""">{content}</td>" + Environment.NewLine);
         }
 
         [TestMethod]
@@ -27,11 +27,11 @@ namespace TOTD.Mailer.Test
             string content = "content";
             string css = "css";
 
-            TableHeaderElement element = new TableHeaderElement();
+            TableCellElement element = new TableCellElement();
             element.AddText(content);
             element.AddClass(css);
 
-            element.ToHtml().Should().Be($@"    <th class=""{css}"">{content}</th>" + Environment.NewLine);
+            element.ToHtml().Should().Be($@"    <td class=""{css}"">{content}</td>" + Environment.NewLine);
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace TOTD.Mailer.Test
         {
             string content = "content";
 
-            TableHeaderElement element = new TableHeaderElement();
+            TableCellElement element = new TableCellElement();
             element.AddText(content);
 
             element.ToText().Should().Be(content);

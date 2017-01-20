@@ -5,7 +5,7 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TOTD.Mailer.Core.Elements;
 
-namespace TOTD.Mailer.Test
+namespace TOTD.Mailer.Test.CoreTests
 {
     [TestClass]
     public class TableTests
@@ -111,8 +111,8 @@ namespace TOTD.Mailer.Test
 
             // Don't forget the trailing spaces for the last column
             text.Should().Be($@"
-header1 header2 
-r1c1    r1c2    
+header1 header2
+r1c1    r1c2
 
 ");
         }
