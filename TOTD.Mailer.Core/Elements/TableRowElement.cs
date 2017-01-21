@@ -72,7 +72,6 @@ namespace TOTD.Mailer.Core.Elements
                 c++;
             }
 
-            builder.AppendLine();
 
             return builder.ToString();
         }

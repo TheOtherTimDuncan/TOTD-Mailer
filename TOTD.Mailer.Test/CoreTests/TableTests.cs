@@ -109,7 +109,6 @@ namespace TOTD.Mailer.Test.CoreTests
             string text = element.ToText();
             Console.WriteLine(text);
 
-            // Don't forget the trailing spaces for the last column
             text.Should().Be($@"
 header1 header2
 r1c1    r1c2

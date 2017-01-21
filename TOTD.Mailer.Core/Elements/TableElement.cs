@@ -75,7 +75,11 @@ namespace TOTD.Mailer.Core.Elements
             StringBuilder builder = new StringBuilder();
             builder.AppendLine();
 
-            _rows.NullSafeForEach(x => builder.Append(x.ToText(lengths.ToArray())));
+            _rows.NullSafeForEach(x =>
+            {
+                builder.Append(x.ToText(lengths.ToArray()).Trim());
+                builder.AppendLine();
+            });
 
             builder.AppendLine();
 

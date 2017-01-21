@@ -37,7 +37,7 @@ namespace TOTD.Mailer.Test.CoreTests
                 .AddCell(cell1)
                 .AddCell(cell2);
 
-            row.ToText(new[] { 5, 5 }).Should().Be($"{cell1}   {cell2}  {Environment.NewLine}");
+            row.ToText(new[] { 5, 5 }).Should().Be($"{cell1}   {cell2}  ");
         }
     }
 }
