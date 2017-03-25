@@ -2,7 +2,7 @@
   "disabled": false,
   "bindings": [
     {
-      "name": "emailMessage",
+      "name": "blob",
       "type": "blobTrigger",
       "direction": "in",
       "path": "emails/sendgrid-{name}",
@@ -10,7 +10,7 @@
     },
     {
       "type": "sendGrid",
-      "name": "message",
+      "name": "$return",
       "direction": "out"
     }
   ]

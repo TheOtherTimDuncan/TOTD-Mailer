@@ -6,10 +6,11 @@ using Newtonsoft.Json;
 using SendGrid.Helpers.Mail;
 using TOTD.Mailer.Core;
 
-public static void Run(string emailMessage, TraceWriter log, out Mail message)
+public static async Task<Mail> Run(CloudBlockBlob blob, TraceWriter log)
 {
     string json = await blob.DownloadTextAsync();
     EmailMessage emailMessage = JsonConvert.DeserializeObject<EmailMessage>(json);
-    message = SendWithSendGrid(queueMessage, log);
+    Mail message = SendWithSendGrid(emailMessage, log);
     await blob.DeleteAsync();
+    return message;
 }

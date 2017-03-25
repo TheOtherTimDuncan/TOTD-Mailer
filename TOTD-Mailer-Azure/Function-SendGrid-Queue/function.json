@@ -5,7 +5,7 @@
       "name": "queueMessage",
       "type": "queueTrigger",
       "direction": "in",
-      "queueName": "sendgrid",
+      "queueName": "email-sendgrid",
       "connection": "AzureWebJobsStorage"
     },
     {

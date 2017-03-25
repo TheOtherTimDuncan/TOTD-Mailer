@@ -5,7 +5,7 @@
       "name": "queueMessage",
       "type": "queueTrigger",
       "direction": "in",
-      "queueName": "mailtrap",
+      "queueName": "email-mailtrap",
       "connection": "AzureWebJobsStorage"
     }
   ]
