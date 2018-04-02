@@ -68,9 +68,8 @@
       <HintPath>..\packages\WindowsAzure.Storage.8.0.1\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PreMailer.Net, Version=1.5.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PreMailer.Net.1.5.5\lib\net45\PreMailer.Net.dll</HintPath>
@@ -126,7 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TOTD.Mailer.Azure\TOTD.Mailer.Azure.csproj">
-      <Project>{7920357a-a362-4707-914d-b3b22fc56fe0}</Project>
+      <Project>{a70919c0-cf94-4064-9417-6278b6076d0e}</Project>
       <Name>TOTD.Mailer.Azure</Name>
     </ProjectReference>
     <ProjectReference Include="..\TOTD.Mailer.Core\TOTD.Mailer.Core.csproj">
