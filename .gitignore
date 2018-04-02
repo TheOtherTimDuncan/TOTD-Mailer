@@ -15,6 +15,7 @@ appsettings.json
 sampledata/
 packages/
 TestResults
+nuget.config
 
 # Runtime data
 pids
