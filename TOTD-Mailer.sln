@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOTD.Mailer.Core", "TOTD.Mailer.Core\TOTD.Mailer.Core.csproj", "{B4142D89-2C0C-4FFE-94AC-93005D89D413}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOTD.Mailer.Core", "TOTD.Mailer.Core\TOTD.Mailer.Core.csproj", "{B4142D89-2C0C-4FFE-94AC-93005D89D413}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{31E578F7-0522-44FE-BFD5-9DFDD3E3C650}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOTD.Mailer.Test", "TOTD.Mailer.Test\TOTD.Mailer.Test.csproj", "{1CF0B84B-9727-49F0-AD83-AC02E043F9F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOTD.Mailer.Templates", "TOTD.Mailer.Templates\TOTD.Mailer.Templates.csproj", "{3FAAD441-9404-41D8-9D76-00C13108BCDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOTD.Mailer.Azure", "TOTD.Mailer.Azure\TOTD.Mailer.Azure.csproj", "{7920357A-A362-4707-914D-B3B22FC56FE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOTD.Mailer.Azure", "TOTD.Mailer.Azure\TOTD.Mailer.Azure.csproj", "{7920357A-A362-4707-914D-B3B22FC56FE0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOTD.Mailer.Azure.Functions", "TOTD.Mailer.Azure.Functions\TOTD.Mailer.Azure.Functions.csproj", "{3B4684DA-8804-4A7A-8DF1-D6DEB484E28B}"
 EndProject

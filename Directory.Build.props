@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <Company>The Other Tim Duncan</Company>
+    <Product>TOTD Mailer</Product>
+    <Copyright>Copyright © 2018</Copyright>
+    <AssemblyVersion>1.7.0</AssemblyVersion>
+    <ProductVersion>1.7.0</ProductVersion>
+    <PackageVersion>1.7.0</PackageVersion>
+  </PropertyGroup>
+</Project>

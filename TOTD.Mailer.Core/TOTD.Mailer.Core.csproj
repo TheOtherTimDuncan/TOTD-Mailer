@@ -1,96 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4142D89-2C0C-4FFE-94AC-93005D89D413}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TOTD.Mailer.Core</RootNamespace>
-    <AssemblyName>TOTD.Mailer.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>net461</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="TOTD.Utility, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TOTD.Utility.4.3.0.0\lib\net451\TOTD.Utility.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <PackageReference Include="TOTD.Utility" Version="4.3.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Elements\BaseContainerElement.cs" />
-    <Compile Include="Elements\BaseContentElement.cs" />
-    <Compile Include="Elements\BaseElement.cs" />
-    <Compile Include="Elements\BaseTableCellElement.cs" />
-    <Compile Include="Elements\BodyElement.cs" />
-    <Compile Include="Elements\ButtonElement.cs" />
-    <Compile Include="Elements\ImageElement.cs" />
-    <Compile Include="Elements\LineBreakElement.cs" />
-    <Compile Include="Elements\LinkElement.cs" />
-    <Compile Include="Elements\ParagraphElement.cs" />
-    <Compile Include="Elements\TableHeaderElement.cs" />
-    <Compile Include="Elements\TableCellElement.cs" />
-    <Compile Include="Elements\TableElement.cs" />
-    <Compile Include="Elements\TableRowElement.cs" />
-    <Compile Include="Elements\TextElement.cs" />
-    <Compile Include="EmailBuilder.cs" />
-    <Compile Include="EmailMessage.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ProjectReference Include="..\TOTD.Mailer.Templates\TOTD.Mailer.Templates.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TOTD.Mailer.Templates\TOTD.Mailer.Templates.csproj">
-      <Project>{3faad441-9404-41d8-9d76-00c13108bcdb}</Project>
-      <Name>TOTD.Mailer.Templates</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PostBuildEvent>IF "$(ConfigurationName)" == "Release" (  
-  CALL "$(SolutionDir)\packages\NuGet.CommandLine.3.5.0\tools\NuGet.exe" pack "$(ProjectDir)$(ProjectFileName)" -Prop Configuration=Release -Prop Platform=AnyCPU -IncludeReferencedProjects -OutputDirectory "C:\Users\tdunc\Code\Packages\Staging" -Verbosity detailed
-)</PostBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
