@@ -5,6 +5,11 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\net461\TOTD.Mailer.Core.xml</DocumentationFile>
+    <NoWarn></NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="TOTD.Utility" Version="4.3.0" />
   </ItemGroup>
