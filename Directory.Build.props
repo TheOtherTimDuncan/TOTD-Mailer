@@ -4,7 +4,7 @@
     <Product>TOTD Mailer</Product>
     <Copyright>Copyright © 2018</Copyright>
     <AssemblyVersion>1.7.0</AssemblyVersion>
-    <ProductVersion>1.7.0</ProductVersion>
+    <InformationalVersion>1.7.0</InformationalVersion>
     <PackageVersion>1.7.0</PackageVersion>
   </PropertyGroup>
 </Project>
