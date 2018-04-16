@@ -3,11 +3,16 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\net461\TOTD.Mailer.Core.xml</DocumentationFile>
     <NoWarn></NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\net461\TOTD.Mailer.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

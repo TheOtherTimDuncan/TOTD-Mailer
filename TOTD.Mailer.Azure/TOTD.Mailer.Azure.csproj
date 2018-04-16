@@ -2,11 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\net461\TOTD.Mailer.Azure.xml</DocumentationFile>
     <NoWarn></NoWarn>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\net461\TOTD.Mailer.Azure.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
